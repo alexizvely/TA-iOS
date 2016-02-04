@@ -10,9 +10,13 @@ import UIKit
 
 class MainMenuViewController: UIViewController {
 
+    @IBOutlet weak var bgImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        bgImage.image = UIImage(named: "mainTree")
+//        self.view.insertSubview(backgroundImage, atIndex: 0)
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +35,12 @@ class MainMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func StartGame(sender: AnyObject) {
+        let id = "GameScene";
+        print("whatever");
+        let gameVC = self.storyboard?.instantiateViewControllerWithIdentifier(id);
+        self.navigationController?.pushViewController(gameVC!, animated: true);
+    }
 
 }
