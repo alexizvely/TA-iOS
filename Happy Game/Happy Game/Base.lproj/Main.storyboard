@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainTree" translatesAutoresizingMaskIntoConstraints="NO" id="p07-hl-j3R">
-                                <rect key="frame" x="20" y="132" width="560" height="301"/>
+                            <imageView userInteractionEnabled="NO" tag="-1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainTree" translatesAutoresizingMaskIntoConstraints="NO" id="p07-hl-j3R">
+                                <rect key="frame" x="7" y="76" width="586" height="516"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlV-Re-Irp">
                                 <rect key="frame" x="179" y="72" width="243" height="79"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="243" id="Q3J-yG-DWj"/>
-                                    <constraint firstAttribute="height" constant="79" id="dfB-UT-W9X"/>
+                                    <constraint firstAttribute="width" constant="243" id="Rj9-dS-zMr"/>
+                                    <constraint firstAttribute="height" constant="79" id="xMy-yg-kGC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="39"/>
                                 <color key="textColor" red="0.99118131399154663" green="0.14643549919128418" blue="0.068738006055355072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,9 +35,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceu-HA-WYy">
                                 <rect key="frame" x="0.0" y="432" width="600" height="30"/>
                                 <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="uFT-Ng-UcD"/>
-                                </constraints>
                                 <state key="normal" title="Settings"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-Q4-mUJ">
@@ -58,21 +55,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.96078431372549022" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="centerX" secondItem="p07-hl-j3R" secondAttribute="centerX" id="05I-3u-a5c"/>
-                            <constraint firstItem="ceu-HA-WYy" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leading" id="0YH-Fg-yVV"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="top" secondItem="b6w-cI-gBx" secondAttribute="bottom" constant="45" id="5dl-E9-eKS"/>
-                            <constraint firstItem="b6w-cI-gBx" firstAttribute="trailing" secondItem="Bmk-Q4-mUJ" secondAttribute="trailing" id="6Du-eQ-4CP"/>
-                            <constraint firstItem="p07-hl-j3R" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leadingMargin" id="AHl-5c-Ggb"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="ceu-HA-WYy" secondAttribute="trailing" id="Bsj-9s-Oz5"/>
-                            <constraint firstAttribute="trailing" secondItem="b6w-cI-gBx" secondAttribute="trailing" id="Gj8-Sh-S74"/>
-                            <constraint firstItem="b6w-cI-gBx" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="J8v-TI-VJB"/>
-                            <constraint firstItem="ceu-HA-WYy" firstAttribute="top" secondItem="p07-hl-j3R" secondAttribute="bottom" constant="-1" id="SEe-Ka-Jbp"/>
-                            <constraint firstItem="ceu-HA-WYy" firstAttribute="top" secondItem="Bmk-Q4-mUJ" secondAttribute="bottom" constant="37" id="WFP-wC-1Z1"/>
-                            <constraint firstItem="ceu-HA-WYy" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="f1l-Lj-8gk"/>
-                            <constraint firstItem="p07-hl-j3R" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="68" id="fnq-Hq-4yh"/>
-                            <constraint firstItem="hlV-Re-Irp" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="8" symbolic="YES" id="itH-54-vII"/>
-                            <constraint firstItem="b6w-cI-gBx" firstAttribute="centerX" secondItem="hlV-Re-Irp" secondAttribute="centerX" id="mRh-GU-i1T"/>
-                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="ceu-HA-WYy" secondAttribute="bottom" constant="138" id="nAb-Ek-MKc"/>
+                            <constraint firstItem="p07-hl-j3R" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="12" id="3jj-Xg-HjG"/>
+                            <constraint firstAttribute="trailing" secondItem="ceu-HA-WYy" secondAttribute="trailing" id="F1u-4h-QaE"/>
+                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="p07-hl-j3R" secondAttribute="bottom" constant="8" symbolic="YES" id="FXa-RU-G7A"/>
+                            <constraint firstItem="p07-hl-j3R" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leadingMargin" constant="-13" id="Fdb-wT-87a"/>
+                            <constraint firstItem="p07-hl-j3R" firstAttribute="centerX" secondItem="b6w-cI-gBx" secondAttribute="centerX" id="K2o-Nn-ey5"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="b6w-cI-gBx" secondAttribute="trailing" id="L6y-rM-rgI"/>
+                            <constraint firstItem="b6w-cI-gBx" firstAttribute="centerX" secondItem="hlV-Re-Irp" secondAttribute="centerX" id="SWb-ZT-C9a"/>
+                            <constraint firstItem="ceu-HA-WYy" firstAttribute="trailing" secondItem="Bmk-Q4-mUJ" secondAttribute="trailing" id="ZuB-8q-qNR"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leading" id="awe-fi-905"/>
+                            <constraint firstItem="ceu-HA-WYy" firstAttribute="top" secondItem="Bmk-Q4-mUJ" secondAttribute="bottom" constant="37" id="bdp-4w-pnk"/>
+                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="ceu-HA-WYy" secondAttribute="bottom" constant="138" id="cxt-Pr-Num"/>
+                            <constraint firstItem="hlV-Re-Irp" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="8" symbolic="YES" id="gtV-cR-zj1"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="top" secondItem="b6w-cI-gBx" secondAttribute="bottom" constant="45" id="kZA-lE-xaL"/>
+                            <constraint firstItem="b6w-cI-gBx" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="m2L-P3-sXB"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="leading" secondItem="ceu-HA-WYy" secondAttribute="leading" id="mrv-eJ-mNk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Happy Game" id="SNa-4H-Hht"/>
@@ -96,12 +93,94 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="669" y="308"/>
+        </scene>
+        <!--Level Selection View Controller-->
+        <scene sceneID="p4w-Dk-pdZ">
+            <objects>
+                <viewController storyboardIdentifier="LevelSelection" id="bWy-SW-Z8e" customClass="LevelSelectionViewController" customModule="Happy_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UsS-g5-5qh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXN-24-1dJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LR3-6h-GnO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQV-gI-V70">
+                                <rect key="frame" x="233" y="301" width="135" height="109"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <state key="normal" title="Level 2" backgroundImage="levelTwoBg">
+                                    <color key="titleColor" red="0.95686274509803926" green="0.0" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.063881236029999997" green="0.070455660990000002" blue="0.02922450871" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LevelTwo:" destination="bWy-SW-Z8e" eventType="touchUpInside" id="IVS-CP-iB3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv5-lq-LJe">
+                                <rect key="frame" x="233" y="153" width="135" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="WXS-E3-KZc"/>
+                                    <constraint firstAttribute="width" constant="135" id="dFQ-Ei-BRf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <state key="normal" title="Level 1" backgroundImage="levelOneBg">
+                                    <color key="titleShadowColor" red="0.1333033377" green="0.1333033377" blue="0.1333033377" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LevelOne:" destination="bWy-SW-Z8e" eventType="touchUpInside" id="kSd-PN-uoM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-oG-0bW">
+                                <rect key="frame" x="179" y="28" width="243" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="gfu-1I-30B"/>
+                                    <constraint firstAttribute="width" constant="243" id="xya-5r-hOZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="33"/>
+                                <color key="textColor" red="0.99118131399154663" green="0.14643549919128418" blue="0.068738006055355072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.054503435859999998" green="0.0004302137663" blue="0.0043514938399999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K71-kU-0fG">
+                                <rect key="frame" x="233" y="442" width="135" height="109"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <state key="normal" title="Level 3" backgroundImage="levelThreeBg">
+                                    <color key="titleColor" red="1" green="0.0074285916020000002" blue="0.073015306969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.063881236029999997" green="0.070455660990000002" blue="0.02922450871" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LevelThree:" destination="bWy-SW-Z8e" eventType="touchUpInside" id="Ube-SR-kfo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92139682329999995" green="1" blue="0.86045479960000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9GL-oG-0bW" firstAttribute="top" secondItem="UsS-g5-5qh" secondAttribute="bottom" constant="8" symbolic="YES" id="7M3-qb-C3T"/>
+                            <constraint firstItem="TQV-gI-V70" firstAttribute="top" secondItem="Qv5-lq-LJe" secondAttribute="bottom" constant="39" id="7zb-eh-YBD"/>
+                            <constraint firstItem="K71-kU-0fG" firstAttribute="top" secondItem="TQV-gI-V70" secondAttribute="bottom" constant="32" id="9YB-2H-qsh"/>
+                            <constraint firstItem="TQV-gI-V70" firstAttribute="leading" secondItem="Qv5-lq-LJe" secondAttribute="leading" id="C2n-Sw-DyW"/>
+                            <constraint firstItem="TQV-gI-V70" firstAttribute="centerY" secondItem="LR3-6h-GnO" secondAttribute="centerY" constant="55.5" id="FHO-ea-olj"/>
+                            <constraint firstItem="TQV-gI-V70" firstAttribute="height" secondItem="Qv5-lq-LJe" secondAttribute="height" id="Jns-zi-kag"/>
+                            <constraint firstItem="Qv5-lq-LJe" firstAttribute="top" secondItem="9GL-oG-0bW" secondAttribute="bottom" constant="46" id="S48-pv-Ru4"/>
+                            <constraint firstItem="Qv5-lq-LJe" firstAttribute="trailing" secondItem="TQV-gI-V70" secondAttribute="trailing" id="TBd-b7-Aa3"/>
+                            <constraint firstItem="TQV-gI-V70" firstAttribute="leading" secondItem="K71-kU-0fG" secondAttribute="leading" id="Uzr-is-aqy"/>
+                            <constraint firstItem="K71-kU-0fG" firstAttribute="height" secondItem="TQV-gI-V70" secondAttribute="height" id="Zhe-Ya-EeB"/>
+                            <constraint firstItem="K71-kU-0fG" firstAttribute="centerX" secondItem="LR3-6h-GnO" secondAttribute="centerX" id="bBR-8S-MEq"/>
+                            <constraint firstItem="Qv5-lq-LJe" firstAttribute="centerX" secondItem="9GL-oG-0bW" secondAttribute="centerX" id="eW4-za-tQK"/>
+                            <constraint firstItem="dXN-24-1dJ" firstAttribute="top" secondItem="K71-kU-0fG" secondAttribute="bottom" constant="49" id="mdb-7O-DaY"/>
+                            <constraint firstItem="TQV-gI-V70" firstAttribute="trailing" secondItem="K71-kU-0fG" secondAttribute="trailing" id="owe-vR-t3N"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcm-Lb-aaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1923" y="367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vhf-6s-CS0">
@@ -128,6 +207,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="levelOneBg" width="640" height="480"/>
+        <image name="levelThreeBg" width="1197" height="900"/>
+        <image name="levelTwoBg" width="1024" height="660"/>
         <image name="mainTree" width="652" height="489"/>
     </resources>
     <color key="tintColor" red="0.99118131399154663" green="0.14643549919128418" blue="0.068738006055355072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

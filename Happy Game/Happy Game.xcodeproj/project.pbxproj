@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD12B2AE1C641DA0002CBAE9 /* LevelSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12B2AD1C641DA0002CBAE9 /* LevelSelectionViewController.swift */; };
+		BD12B2B11C642A99002CBAE9 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12B2B01C642A99002CBAE9 /* LevelManager.swift */; };
+		BD12B2B61C64EC6C002CBAE9 /* cuddles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */; };
+		BD12B2B71C64EC6C002CBAE9 /* giggles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */; };
+		BD12B2B81C64EC6C002CBAE9 /* petunia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */; };
 		BD54FCC11C623223009F9122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FCC01C623223009F9122 /* AppDelegate.swift */; };
 		BD54FCC51C623223009F9122 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FCC41C623223009F9122 /* GameScene.swift */; };
 		BD54FCC71C623223009F9122 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FCC61C623223009F9122 /* GameViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD12B2AD1C641DA0002CBAE9 /* LevelSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectionViewController.swift; sourceTree = "<group>"; };
+		BD12B2B01C642A99002CBAE9 /* LevelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
+		BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cuddles.atlas; sourceTree = "<group>"; };
+		BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = giggles.atlas; sourceTree = "<group>"; };
+		BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = petunia.atlas; sourceTree = "<group>"; };
 		BD54FCBD1C623222009F9122 /* Happy Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD54FCC01C623223009F9122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD54FCC41C623223009F9122 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -39,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD12B2AF1C642A6A002CBAE9 /* GameManagers */ = {
+			isa = PBXGroup;
+			children = (
+				BD12B2B01C642A99002CBAE9 /* LevelManager.swift */,
+			);
+			name = GameManagers;
+			sourceTree = "<group>";
+		};
+		BD12B2B21C64C1CD002CBAE9 /* GameScenes */ = {
+			isa = PBXGroup;
+			children = (
+				BD54FCC41C623223009F9122 /* GameScene.swift */,
+			);
+			name = GameScenes;
+			sourceTree = "<group>";
+		};
 		BD54FCB41C623222009F9122 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +84,13 @@
 		BD54FCBF1C623223009F9122 /* Happy Game */ = {
 			isa = PBXGroup;
 			children = (
+				BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */,
+				BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */,
+				BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */,
+				BD12B2B21C64C1CD002CBAE9 /* GameScenes */,
+				BD12B2AF1C642A6A002CBAE9 /* GameManagers */,
 				BD54FCDD1C6236E2009F9122 /* Controllers */,
 				BD54FCC01C623223009F9122 /* AppDelegate.swift */,
-				BD54FCC41C623223009F9122 /* GameScene.swift */,
-				BD54FCC61C623223009F9122 /* GameViewController.swift */,
 				BD54FCC81C623223009F9122 /* Main.storyboard */,
 				BD54FCCB1C623223009F9122 /* Assets.xcassets */,
 				BD54FCCD1C623223009F9122 /* LaunchScreen.storyboard */,
@@ -73,7 +102,9 @@
 		BD54FCDD1C6236E2009F9122 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD54FCC61C623223009F9122 /* GameViewController.swift */,
 				BD54FCDE1C623728009F9122 /* MainMenuViewController.swift */,
+				BD12B2AD1C641DA0002CBAE9 /* LevelSelectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -137,8 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD12B2B81C64EC6C002CBAE9 /* petunia.atlas in Resources */,
+				BD12B2B61C64EC6C002CBAE9 /* cuddles.atlas in Resources */,
 				BD54FCCF1C623223009F9122 /* LaunchScreen.storyboard in Resources */,
 				BD54FCCC1C623223009F9122 /* Assets.xcassets in Resources */,
+				BD12B2B71C64EC6C002CBAE9 /* giggles.atlas in Resources */,
 				BD54FCCA1C623223009F9122 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +188,8 @@
 				BD54FCC51C623223009F9122 /* GameScene.swift in Sources */,
 				BD54FCC71C623223009F9122 /* GameViewController.swift in Sources */,
 				BD54FCC11C623223009F9122 /* AppDelegate.swift in Sources */,
+				BD12B2B11C642A99002CBAE9 /* LevelManager.swift in Sources */,
+				BD12B2AE1C641DA0002CBAE9 /* LevelSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +339,7 @@
 				BD54FCD51C623223009F9122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

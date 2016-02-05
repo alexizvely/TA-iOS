@@ -37,8 +37,8 @@ class MainMenuViewController: UIViewController {
     */
     
     @IBAction func StartGame(sender: AnyObject) {
-        let id = "GameScene";
-        print("whatever");
+        let id = "LevelSelection";
+        print("go to level selection");
         let gameVC = self.storyboard?.instantiateViewControllerWithIdentifier(id);
         self.navigationController?.pushViewController(gameVC!, animated: true);
     }
