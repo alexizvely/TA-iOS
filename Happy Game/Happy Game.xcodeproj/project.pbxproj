@@ -19,6 +19,8 @@
 		BD54FCCC1C623223009F9122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD54FCCB1C623223009F9122 /* Assets.xcassets */; };
 		BD54FCCF1C623223009F9122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD54FCCD1C623223009F9122 /* LaunchScreen.storyboard */; };
 		BD54FCDF1C623728009F9122 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FCDE1C623728009F9122 /* MainMenuViewController.swift */; };
+		BD9342921C67BC1900FA3CA2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */; };
+		BD9342941C67DB1200FA3CA2 /* htf-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BD54FCCE1C623223009F9122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD54FCD01C623223009F9122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD54FCDE1C623728009F9122 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "htf-sound.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9342921C67BC1900FA3CA2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,7 @@
 		BD54FCB41C623222009F9122 = {
 			isa = PBXGroup;
 			children = (
+				BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */,
 				BD54FCBF1C623223009F9122 /* Happy Game */,
 				BD54FCBE1C623222009F9122 /* Products */,
 			);
@@ -84,6 +90,7 @@
 		BD54FCBF1C623223009F9122 /* Happy Game */ = {
 			isa = PBXGroup;
 			children = (
+				BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */,
 				BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */,
 				BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */,
 				BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */,
@@ -171,6 +178,7 @@
 				BD12B2B81C64EC6C002CBAE9 /* petunia.atlas in Resources */,
 				BD12B2B61C64EC6C002CBAE9 /* cuddles.atlas in Resources */,
 				BD54FCCF1C623223009F9122 /* LaunchScreen.storyboard in Resources */,
+				BD9342941C67DB1200FA3CA2 /* htf-sound.mp3 in Resources */,
 				BD54FCCC1C623223009F9122 /* Assets.xcassets in Resources */,
 				BD12B2B71C64EC6C002CBAE9 /* giggles.atlas in Resources */,
 				BD54FCCA1C623223009F9122 /* Main.storyboard in Resources */,

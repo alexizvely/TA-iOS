@@ -13,17 +13,15 @@ import AVFoundation
 class GameViewController: UIViewController {
     
     var levelManager: LevelManager!;
+    var scene: GameScene!;
     
-    
-    @IBOutlet weak var bgImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.bgImage.image = UIImage(named: self.levelManager.backGroundname);
-        
         print(String(self.levelManager.level));
         
-        let scene = GameScene(size: view.bounds.size)
+        scene = GameScene(size: view.bounds.size)
+        scene.backgroundImageName = levelManager.backGroundname;
         scene.atlasName = "cuddles";
         let skView = view as! SKView
         skView.showsFPS = true
@@ -53,4 +51,10 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+//    override func didMoveToParentViewController(parent: UIViewController?) {
+//        if(parent != self.parentViewController){
+//        scene.audioPlayer.stop();
+//        }
+//    }
 }
