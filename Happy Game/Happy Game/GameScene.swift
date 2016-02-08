@@ -136,6 +136,7 @@ class GameScene: SKScene {
         audioPlayer.numberOfLoops = -1;
         audioPlayer.play();
         self.soundControl = SKLabelNode(text: "-Sound On-");
+        self.soundControl.fontColor = SKColor.blackColor();
         self.soundControl.fontName = "Papyrus"
         soundControl.position = CGPoint(x: (self.frame.size.width)*(0.75), y:(self.frame.size.height)-100);
         soundControl.name = "soundControl";

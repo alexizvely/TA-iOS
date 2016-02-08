@@ -15,6 +15,8 @@ class LevelManager: NSObject {
     var backGroundname: String!;
     
     
+    
+    
     init(withLevel level:Int) {
         
         self.level = level;

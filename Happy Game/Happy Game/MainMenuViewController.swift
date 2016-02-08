@@ -18,6 +18,16 @@ class MainMenuViewController: UIViewController {
         bgImage.image = UIImage(named: "mainTree")
 //        self.view.insertSubview(backgroundImage, atIndex: 0)
         // Do any additional setup after loading the view.
+        
+        let query = PFQuery(className: "Highscore");
+        do{
+            let result = try query.getFirstObject();
+            print(result);
+
+        }
+        catch _{
+            print("Err");
+        }
     }
 
     override func didReceiveMemoryWarning() {
