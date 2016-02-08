@@ -23,16 +23,12 @@ class GameViewController: UIViewController {
         scene = GameScene(size: view.bounds.size)
         scene.backgroundImageName = levelManager.backGroundname;
         
-        var name = Int(arc4random_uniform(2)+1);
-        name=2;
+        var name = Int(arc4random_uniform(1)+1);
         switch(name){
         case 1:
             scene.atlasName = "cuddles";
             break;
         case 2:
-            scene.atlasName = "giggles";
-            break;
-        case 3:
             scene.atlasName = "petunia";
             break;
         default:
