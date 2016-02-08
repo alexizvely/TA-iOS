@@ -22,8 +22,11 @@ class GameScene: SKScene {
     var backgroundImageName: String!;
     var audioPlayer: AVAudioPlayer!;
     var soundControl: SKLabelNode!;
+    var gameOver: SKLabelNode!;
     var isSoundOn = true;
     var gestureArea: SKSpriteNode!;
+    var timer: NSTimer!;
+    var countDead = 0;
     
     /**
      This func is called when the Game Scene is ready.
@@ -54,7 +57,7 @@ class GameScene: SKScene {
         gestureArea.yScale = 0.60;
         gestureArea.name = "command"
         self.addChild(gestureArea);
-        gestureArea.zPosition = 99999;
+        gestureArea.zPosition = 300;
         
         /// animates the atlas holder
         for var i=1; i <= numberOfImages; i++ {
@@ -66,7 +69,7 @@ class GameScene: SKScene {
         self.setUpAudio();
         
         /// Generates animated objects in a certain time interval with timer
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "makeHappy", userInfo: nil, repeats: true);
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "makeHappy", userInfo: nil, repeats: true);
         self.isActive = true;
         
 
@@ -146,6 +149,16 @@ class GameScene: SKScene {
     
     /// initializes the happy tree friend
     func makeHappy(){
+        if(count>3){
+            self.timer.invalidate();
+            self.gameOver = SKLabelNode(text: "Game Over! Killed: "+String(countDead)+" Alive: "+String(count-countDead));
+            self.gameOver.fontColor = SKColor.blackColor();
+            self.gameOver.fontName = "Papyrus"
+            gameOver.position = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+            gameOver.name = "gameOver";
+            self.addChild(gameOver);
+            gameOver.zPosition = 99999;
+        }
         self.makeNewObject();
     }
     
@@ -163,12 +176,14 @@ class GameScene: SKScene {
     func addAnimationToObj(node: SKSpriteNode){
         node.runAction(SKAction.animateWithTextures(
         self.animationFrames,
-        timePerFrame: 0.25,
+        timePerFrame: 0.50,
         resize: false,
         restore: true),
         completion:{
             print("killed")
             node.texture = self.animationFrames[self.animationFrames.count-1];
+            node.removeFromParent();
+            self.countDead++;
         })
     }
     

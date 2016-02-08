@@ -32,36 +32,27 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.054503435863874294" green="0.00043021376627179692" blue="0.0043514938402623741" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceu-HA-WYy">
-                                <rect key="frame" x="214" y="444" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-Q4-mUJ">
+                                <rect key="frame" x="214" y="476" width="173" height="45"/>
                                 <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="GYQ-pn-H7k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-Q4-mUJ">
-                                <rect key="frame" x="214" y="371" width="173" height="30"/>
-                                <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="a62-7o-75e"/>
+                                    <constraint firstAttribute="height" constant="45" id="a62-7o-75e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="About">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="About:" destination="Q2D-XR-IfZ" eventType="touchUpInside" id="mpR-fF-RtM"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-cI-gBx">
-                                <rect key="frame" x="214" y="294" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-cI-gBx">
+                                <rect key="frame" x="214" y="382" width="173" height="46"/>
                                 <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="173" id="beD-Iw-nar"/>
-                                    <constraint firstAttribute="height" constant="30" id="uOh-c4-bhC"/>
+                                    <constraint firstAttribute="height" constant="46" id="uOh-c4-bhC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -76,19 +67,15 @@
                         <color key="backgroundColor" red="0.98039215686274506" green="0.96078431372549022" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="b6w-cI-gBx" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="2x1-Xo-afL"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="ceu-HA-WYy" secondAttribute="trailing" id="50O-Fw-sbs"/>
                             <constraint firstItem="hlV-Re-Irp" firstAttribute="centerX" secondItem="b6w-cI-gBx" secondAttribute="centerX" id="57a-XM-hud"/>
                             <constraint firstItem="p07-hl-j3R" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leadingMargin" constant="-13" id="5YE-RS-RB8"/>
-                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="ceu-HA-WYy" secondAttribute="bottom" constant="126" id="GkR-bL-GGW"/>
                             <constraint firstItem="p07-hl-j3R" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="12" id="TA9-JC-xfS"/>
                             <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="b6w-cI-gBx" secondAttribute="trailing" id="aYb-me-JNJ"/>
                             <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="centerX" secondItem="p07-hl-j3R" secondAttribute="centerX" id="gfK-AQ-FYz"/>
                             <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="p07-hl-j3R" secondAttribute="bottom" constant="8" symbolic="YES" id="glw-Ag-1kQ"/>
-                            <constraint firstItem="ceu-HA-WYy" firstAttribute="top" secondItem="Bmk-Q4-mUJ" secondAttribute="bottom" constant="43" id="k0f-rs-tz2"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="top" secondItem="b6w-cI-gBx" secondAttribute="bottom" constant="47" id="kB7-SJ-mMf"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="top" secondItem="b6w-cI-gBx" secondAttribute="bottom" constant="48" id="kB7-SJ-mMf"/>
                             <constraint firstItem="b6w-cI-gBx" firstAttribute="centerX" secondItem="wLv-F3-RWK" secondAttribute="centerX" id="laT-8h-ZLn"/>
                             <constraint firstItem="hlV-Re-Irp" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="8" symbolic="YES" id="wBk-Cc-TkP"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="leading" secondItem="ceu-HA-WYy" secondAttribute="leading" id="wyE-nm-c7h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Happy Game" id="SNa-4H-Hht"/>
@@ -223,6 +210,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kK0-JM-h7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-773" y="308"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="Nld-kv-AZs">
+            <objects>
+                <viewController storyboardIdentifier="About" title="About" id="WSK-tu-juG" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Wj-qo-Th6"/>
+                        <viewControllerLayoutGuide type="bottom" id="04S-Xe-clh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lxn-7S-XEn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lql-d8-4Jy">
+                                <rect key="frame" x="20" y="113" width="560" height="325"/>
+                                <string key="text">This is a game where Happy Tree Friends are on an conveyor belt, which leads them to a kill machine. When in the machine upon a right command the cute animal is killed and death animation is started, when it exits the machine. At the end of the conveyor belt there is a hole where the body is dropped. </string>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.0" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.96078431369999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="04S-Xe-clh" firstAttribute="top" secondItem="Lql-d8-4Jy" secondAttribute="bottom" constant="162" id="8Ci-Au-eLg"/>
+                            <constraint firstItem="Lql-d8-4Jy" firstAttribute="leading" secondItem="Lxn-7S-XEn" secondAttribute="leadingMargin" id="GUH-76-iw3"/>
+                            <constraint firstItem="Lql-d8-4Jy" firstAttribute="top" secondItem="9Wj-qo-Th6" secondAttribute="bottom" constant="93" id="KC3-YW-ONR"/>
+                            <constraint firstItem="Lql-d8-4Jy" firstAttribute="trailing" secondItem="Lxn-7S-XEn" secondAttribute="trailingMargin" id="vgq-9Z-UfX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="Lql-d8-4Jy" id="5G6-lM-qEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hV-j0-iHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="288"/>
         </scene>
     </scenes>
     <resources>
