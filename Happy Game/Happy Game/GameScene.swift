@@ -61,24 +61,12 @@ class GameScene: SKScene {
         gestureArea.zPosition = 300;
         
         //belt 
-        let beltAtlas = SKTextureAtlas(named: "tmp");
-        var animationFramesForBelt = [SKTexture]();
-        let beltFrameCount = beltAtlas.textureNames.count;
-        
-        for var y=1; y <= beltFrameCount; y++ {
-            let tName = "tmp"+String(y);
-            animationFramesForBelt.append(beltAtlas.textureNamed(tName));
-        }
-        
-        var beltNode = SKSpriteNode(texture: animationFramesForBelt[0]);
-        beltNode.position = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-50);
+        let beltTexture = SKTexture(imageNamed: "tmp0");
+
+        let beltNode = SKSpriteNode(texture: beltTexture);
+        beltNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: (CGRectGetMidY(self.frame)) - ((gestureArea.size.height)*0.85));
         addChild(beltNode)
-        beltNode.runAction(SKAction.repeatActionForever(
-            SKAction.animateWithTextures(animationFramesForBelt,
-                timePerFrame: 0.2,
-                resize: false,
-                restore: true)),
-            withKey:"animationMain");
+        beltNode.name="belt";
 
         /// animates the atlas holder
         for var i=1; i <= numberOfImages; i++ {
@@ -106,9 +94,6 @@ class GameScene: SKScene {
         let gestureRecognizerPinch = UIPinchGestureRecognizer(target: self, action: Selector("handlePinch:"))
         self.view!.addGestureRecognizer(gestureRecognizerPinch)
         
-        let gestureRecognizerTap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-        self.view!.addGestureRecognizer(gestureRecognizerTap)
-        
         let gestureRecognizerRotation = UIRotationGestureRecognizer(target: self, action: Selector("handleRotation:"))
         self.view!.addGestureRecognizer(gestureRecognizerRotation)
         
@@ -131,7 +116,7 @@ class GameScene: SKScene {
         let targetNode = nodes[1];
         
         if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background"){
+            if(targetNode.name != "background" && targetNode.name != "belt"){
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 2;
             }
@@ -152,7 +137,7 @@ class GameScene: SKScene {
         let targetNode = nodes[1];
         
         if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background"){
+            if(targetNode.name != "background" && targetNode.name != "belt"){
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 0.5;
             }
@@ -173,30 +158,9 @@ class GameScene: SKScene {
         let targetNode = nodes[1];
         
         if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background"){
+            if(targetNode.name != "background" && targetNode.name != "belt"){
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 1.5;
-            }
-        }
-    }
-    
-    // **New**
-    func handleTap(recognizer: UITapGestureRecognizer) {
-        
-        if(recognizer.state != .Ended){
-            return;
-        }
-        
-        var touchLocation = recognizer.locationInView(recognizer.view)
-        touchLocation = self.convertPointFromView(touchLocation)
-        let nodes = self.nodesAtPoint(touchLocation);
-        let nodeAtFront = nodes[0];
-        let targetNode = nodes[1];
-        
-        if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background"){
-                self.addAnimationToObj(nodes[1] as! SKSpriteNode);
-                score = score + 0.25;
             }
         }
     }
@@ -215,7 +179,7 @@ class GameScene: SKScene {
         let treeFrined = nodes[1].name;
         
         if(node.name == "command"){
-            if(treeFrined != "background"){
+            if(treeFrined != "background" && treeFrined != "belt"){
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 0.5;
             }
@@ -247,13 +211,18 @@ class GameScene: SKScene {
     func makeHappy(){
         if(count>3){
             self.timer.invalidate();
-            self.gameOver = SKLabelNode(text: "Game Over! Killed: "+String(countDead)+" Alive: "+String(count-countDead)+" Score: "+String(score));
+            self.gameOver = SKLabelNode(text: "Killed: "+String(countDead)+" Alive: "+String(count-countDead)+" Score: "+String(score));
             self.gameOver.fontColor = SKColor.blackColor();
             self.gameOver.fontName = "Papyrus"
             gameOver.position = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
             gameOver.name = "gameOver";
             self.addChild(gameOver);
             gameOver.zPosition = 99999;
+            let obj = PFObject(className: "Highscore");
+            obj["Killed"] = countDead;
+            obj["Saved"] = count-countDead;
+            obj["TotalScore"] = score;
+            obj.saveInBackground();
         }
         self.makeNewObject();
     }

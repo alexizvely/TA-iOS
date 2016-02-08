@@ -32,9 +32,9 @@
 		BD54FCDF1C623728009F9122 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54FCDE1C623728009F9122 /* MainMenuViewController.swift */; };
 		BD65261E1C68373000B0B8B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD65261D1C68373000B0B8B3 /* Bolts.framework */; };
 		BD6526201C68373B00B0B8B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD65261F1C68373B00B0B8B3 /* Parse.framework */; };
-		BD6526241C683F1B00B0B8B3 /* tmp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD6526231C683F1B00B0B8B3 /* tmp.atlas */; };
 		BD9342921C67BC1900FA3CA2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */; };
 		BD9342941C67DB1200FA3CA2 /* htf-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */; };
+		BDE4DE361C6859DF00E764D3 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4DE351C6859DF00E764D3 /* HighScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,9 +67,9 @@
 		BD54FCDE1C623728009F9122 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		BD65261D1C68373000B0B8B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BD65261F1C68373B00B0B8B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		BD6526231C683F1B00B0B8B3 /* tmp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tmp.atlas; sourceTree = "<group>"; };
 		BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "htf-sound.mp3"; sourceTree = "<group>"; };
+		BDE4DE351C6859DF00E764D3 /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */,
-				BD6526231C683F1B00B0B8B3 /* tmp.atlas */,
 				BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */,
 				BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */,
 				BD12B2B21C64C1CD002CBAE9 /* GameScenes */,
@@ -171,6 +170,7 @@
 				BD12B2AD1C641DA0002CBAE9 /* LevelSelectionViewController.swift */,
 				BD491AE61C682B030093E13F /* AboutViewController.h */,
 				BD491AE71C682B030093E13F /* AboutViewController.m */,
+				BDE4DE351C6859DF00E764D3 /* HighScoreViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -239,7 +239,6 @@
 				BD54FCCF1C623223009F9122 /* LaunchScreen.storyboard in Resources */,
 				BD9342941C67DB1200FA3CA2 /* htf-sound.mp3 in Resources */,
 				BD54FCCC1C623223009F9122 /* Assets.xcassets in Resources */,
-				BD6526241C683F1B00B0B8B3 /* tmp.atlas in Resources */,
 				BD54FCCA1C623223009F9122 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +253,7 @@
 				BD54FCDF1C623728009F9122 /* MainMenuViewController.swift in Sources */,
 				BD54FCC51C623223009F9122 /* GameScene.swift in Sources */,
 				BD54FCC71C623223009F9122 /* GameViewController.swift in Sources */,
+				BDE4DE361C6859DF00E764D3 /* HighScoreViewController.swift in Sources */,
 				BD491AE81C682B030093E13F /* AboutViewController.m in Sources */,
 				BD54FCC11C623223009F9122 /* AppDelegate.swift in Sources */,
 				BD12B2B11C642A99002CBAE9 /* LevelManager.swift in Sources */,

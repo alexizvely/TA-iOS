@@ -22,21 +22,21 @@
                                 <rect key="frame" x="7" y="76" width="586" height="516"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlV-Re-Irp">
-                                <rect key="frame" x="179" y="72" width="243" height="79"/>
+                                <rect key="frame" x="179" y="149" width="243" height="79"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="243" id="WDx-At-VMR"/>
-                                    <constraint firstAttribute="height" constant="79" id="dZq-lT-3bS"/>
+                                    <constraint firstAttribute="width" constant="243" id="KRc-bI-rxH"/>
+                                    <constraint firstAttribute="height" constant="79" id="XGF-6q-btN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="39"/>
                                 <color key="textColor" red="0.99118131399154663" green="0.14643549919128418" blue="0.068738006055355072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.054503435863874294" green="0.00043021376627179692" blue="0.0043514938402623741" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-Q4-mUJ">
-                                <rect key="frame" x="214" y="476" width="173" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-Q4-mUJ">
+                                <rect key="frame" x="214" y="426" width="173" height="45"/>
                                 <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="a62-7o-75e"/>
+                                    <constraint firstAttribute="height" constant="45" id="KiQ-lY-6iv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -47,12 +47,11 @@
                                     <action selector="About:" destination="Q2D-XR-IfZ" eventType="touchUpInside" id="mpR-fF-RtM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-cI-gBx">
-                                <rect key="frame" x="214" y="382" width="173" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-cI-gBx">
+                                <rect key="frame" x="214" y="337" width="173" height="46"/>
                                 <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="beD-Iw-nar"/>
-                                    <constraint firstAttribute="height" constant="46" id="uOh-c4-bhC"/>
+                                    <constraint firstAttribute="width" constant="173" id="oj4-fz-wmv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -63,19 +62,38 @@
                                     <action selector="StartGame:" destination="Q2D-XR-IfZ" eventType="touchUpInside" id="MZy-UV-2qd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOg-OF-c2p">
+                                <rect key="frame" x="214" y="511" width="173" height="45"/>
+                                <color key="backgroundColor" red="0.90274638159999998" green="1" blue="0.40514671330000002" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="I2T-Gp-Xya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="HighScore">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="HighScore:" destination="Q2D-XR-IfZ" eventType="touchUpInside" id="U4M-n3-b6G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.96078431372549022" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="b6w-cI-gBx" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="2x1-Xo-afL"/>
-                            <constraint firstItem="hlV-Re-Irp" firstAttribute="centerX" secondItem="b6w-cI-gBx" secondAttribute="centerX" id="57a-XM-hud"/>
-                            <constraint firstItem="p07-hl-j3R" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leadingMargin" constant="-13" id="5YE-RS-RB8"/>
-                            <constraint firstItem="p07-hl-j3R" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="12" id="TA9-JC-xfS"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="b6w-cI-gBx" secondAttribute="trailing" id="aYb-me-JNJ"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="centerX" secondItem="p07-hl-j3R" secondAttribute="centerX" id="gfK-AQ-FYz"/>
-                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="p07-hl-j3R" secondAttribute="bottom" constant="8" symbolic="YES" id="glw-Ag-1kQ"/>
-                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="top" secondItem="b6w-cI-gBx" secondAttribute="bottom" constant="48" id="kB7-SJ-mMf"/>
-                            <constraint firstItem="b6w-cI-gBx" firstAttribute="centerX" secondItem="wLv-F3-RWK" secondAttribute="centerX" id="laT-8h-ZLn"/>
-                            <constraint firstItem="hlV-Re-Irp" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="8" symbolic="YES" id="wBk-Cc-TkP"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="b6w-cI-gBx" secondAttribute="trailing" id="4Fm-Th-Tsj"/>
+                            <constraint firstItem="b6w-cI-gBx" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="FKb-Ze-9Pm"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="trailing" secondItem="AOg-OF-c2p" secondAttribute="trailing" id="GRX-yI-4r7"/>
+                            <constraint firstItem="p07-hl-j3R" firstAttribute="leading" secondItem="wLv-F3-RWK" secondAttribute="leadingMargin" constant="-13" id="Gd9-6O-Ky1"/>
+                            <constraint firstItem="p07-hl-j3R" firstAttribute="centerX" secondItem="b6w-cI-gBx" secondAttribute="centerX" id="N7v-qh-cIA"/>
+                            <constraint firstItem="AOg-OF-c2p" firstAttribute="top" secondItem="Bmk-Q4-mUJ" secondAttribute="bottom" constant="41" id="Snk-eZ-NiW"/>
+                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="p07-hl-j3R" secondAttribute="bottom" constant="8" symbolic="YES" id="TKk-1u-Adg"/>
+                            <constraint firstItem="hlV-Re-Irp" firstAttribute="centerX" secondItem="wLv-F3-RWK" secondAttribute="centerX" id="Tgu-Iq-0Tl"/>
+                            <constraint firstItem="hlV-Re-Irp" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="85" id="cVM-DW-bJL"/>
+                            <constraint firstItem="AOg-OF-c2p" firstAttribute="leading" secondItem="Bmk-Q4-mUJ" secondAttribute="leading" id="dAW-Km-Gl0"/>
+                            <constraint firstItem="b6w-cI-gBx" firstAttribute="centerX" secondItem="hlV-Re-Irp" secondAttribute="centerX" id="djo-Cm-ufl"/>
+                            <constraint firstItem="p07-hl-j3R" firstAttribute="top" secondItem="3me-un-xi6" secondAttribute="bottom" constant="12" id="qhL-YA-2oa"/>
+                            <constraint firstItem="Bmk-Q4-mUJ" firstAttribute="top" secondItem="b6w-cI-gBx" secondAttribute="bottom" constant="43" id="xnv-ZQ-bQd"/>
+                            <constraint firstItem="r26-lB-2fh" firstAttribute="top" secondItem="AOg-OF-c2p" secondAttribute="bottom" constant="43" id="yHa-oL-kbw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Happy Game" id="SNa-4H-Hht"/>
@@ -248,6 +266,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hV-j0-iHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="500" y="288"/>
+        </scene>
+        <!--HighScore-->
+        <scene sceneID="CFM-ST-FcG">
+            <objects>
+                <viewController storyboardIdentifier="HighScore" title="HighScore" id="phC-aI-19k" customClass="HighScoreViewController" customModule="Happy_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fgn-MS-WoE"/>
+                        <viewControllerLayoutGuide type="bottom" id="cqU-3Z-WcO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3hz-tT-i5E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSR-po-X4Q">
+                                <rect key="frame" x="200" y="159" width="201" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="13t-Ma-UEx"/>
+                                    <constraint firstAttribute="height" constant="68" id="kVP-11-6K8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mj-IL-v3H">
+                                <rect key="frame" x="200" y="270" width="201" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="jGy-YL-74O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYr-i6-RTb">
+                                <rect key="frame" x="200" y="380" width="201" height="68"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.96078431369999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YYr-i6-RTb" firstAttribute="trailing" secondItem="6mj-IL-v3H" secondAttribute="trailing" id="1QT-d4-Kuk"/>
+                            <constraint firstItem="YYr-i6-RTb" firstAttribute="top" secondItem="6mj-IL-v3H" secondAttribute="bottom" constant="42" id="3Rl-xO-2qm"/>
+                            <constraint firstItem="gSR-po-X4Q" firstAttribute="top" secondItem="Fgn-MS-WoE" secondAttribute="bottom" constant="139" id="PD9-Xz-oyZ"/>
+                            <constraint firstItem="cqU-3Z-WcO" firstAttribute="top" secondItem="YYr-i6-RTb" secondAttribute="bottom" constant="152" id="Pio-Os-oEa"/>
+                            <constraint firstItem="6mj-IL-v3H" firstAttribute="leading" secondItem="gSR-po-X4Q" secondAttribute="leading" id="Psd-gJ-mwZ"/>
+                            <constraint firstItem="YYr-i6-RTb" firstAttribute="leading" secondItem="6mj-IL-v3H" secondAttribute="leading" id="S9A-xj-Rit"/>
+                            <constraint firstItem="6mj-IL-v3H" firstAttribute="trailing" secondItem="gSR-po-X4Q" secondAttribute="trailing" id="XyW-BV-UgT"/>
+                            <constraint firstItem="6mj-IL-v3H" firstAttribute="top" secondItem="gSR-po-X4Q" secondAttribute="bottom" constant="43" id="ipM-Pd-Bcg"/>
+                            <constraint firstItem="gSR-po-X4Q" firstAttribute="centerX" secondItem="3hz-tT-i5E" secondAttribute="centerX" id="wNn-eR-y0e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="top1" destination="gSR-po-X4Q" id="zHJ-hU-kAg"/>
+                        <outlet property="top2" destination="6mj-IL-v3H" id="HsZ-Pk-SJ2"/>
+                        <outlet property="top3" destination="YYr-i6-RTb" id="b7Q-6X-RnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NeI-OY-eeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="946"/>
         </scene>
     </scenes>
     <resources>

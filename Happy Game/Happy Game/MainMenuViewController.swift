@@ -53,6 +53,13 @@ class MainMenuViewController: UIViewController {
         self.navigationController?.pushViewController(gameVC!, animated: true);
     }
 
+    @IBAction func HighScore(sender: AnyObject) {
+        let id = "HighScore";
+        print("go to highscore");
+        let gameVC = self.storyboard?.instantiateViewControllerWithIdentifier(id);
+        self.navigationController?.pushViewController(gameVC!, animated: true);
+    }
+    
     @IBAction func About(sender: AnyObject) {
         let id = "About";
         print("go to about");
