@@ -8,6 +8,7 @@
 
 import SpriteKit
 import AVFoundation
+import CoreMotion
 
 /// Game Scene Class that allows us to create animation from different atlases
 class GameScene: SKScene {
@@ -22,12 +23,15 @@ class GameScene: SKScene {
     var backgroundImageName: String!;
     var audioPlayer: AVAudioPlayer!;
     var soundControl: SKLabelNode!;
+    var deathNotification: SKLabelNode!;
     var gameOver: SKLabelNode!;
     var isSoundOn = true;
     var gestureArea: SKSpriteNode!;
     var timer: NSTimer!;
     var countDead = 0;
     var score = 0.0;
+    var motionManager = CMMotionManager();
+    var navigator: UINavigationController!;
     
     /**
      This func is called when the Game Scene is ready.
@@ -100,6 +104,25 @@ class GameScene: SKScene {
         let gestureRecognizerLongPress = UILongPressGestureRecognizer(target: self, action: Selector("handleLongPress:"))
         self.view!.addGestureRecognizer(gestureRecognizerLongPress)
         
+        if (motionManager.accelerometerAvailable == true) {
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler:{
+                data, error in
+                if ((data!.acceleration.x + data!.acceleration.y + data!.acceleration.z) < 0) {
+                    self.audioPlayer.stop();
+                    print("music is off")
+                    self.soundControl.text = "-Sound Off-"
+                    let transitionTimer =  NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "NavTransition", userInfo: nil, repeats: false);
+                }
+            })
+        }
+        
+        self.deathNotification = SKLabelNode(text: "- -");
+        self.deathNotification.fontColor = SKColor.blackColor();
+        self.deathNotification.fontName = "Papyrus"
+        deathNotification.position = CGPoint(x: (self.frame.size.width)*(0.80), y:CGRectGetMidY(self.frame));
+        deathNotification.name = "deathNotification";
+        self.addChild(deathNotification);
+
     }
     
     // **New**
@@ -119,6 +142,9 @@ class GameScene: SKScene {
             if(targetNode.name != "background" && targetNode.name != "belt"){
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 2;
+            }
+            else{
+                self.deathNotification.text = "Missed!"
             }
         }
     }
@@ -141,6 +167,9 @@ class GameScene: SKScene {
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 0.5;
             }
+            else{
+                self.deathNotification.text = "Missed!"
+            }
         }
     }
     
@@ -162,6 +191,9 @@ class GameScene: SKScene {
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 1.5;
             }
+            else{
+                self.deathNotification.text = "Missed!"
+            }
         }
     }
     
@@ -182,6 +214,9 @@ class GameScene: SKScene {
             if(treeFrined != "background" && treeFrined != "belt"){
                 self.addAnimationToObj(nodes[1] as! SKSpriteNode);
                 score = score + 0.5;
+            }
+            else{
+                self.deathNotification.text = "Missed!"
             }
         }
     }
@@ -216,6 +251,9 @@ class GameScene: SKScene {
             self.gameOver.fontName = "Papyrus"
             gameOver.position = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
             gameOver.name = "gameOver";
+            self.deathNotification.removeFromParent()
+            self.gestureArea.removeFromParent()
+            self.timer.invalidate()
             self.addChild(gameOver);
             gameOver.zPosition = 99999;
             let obj = PFObject(className: "Highscore");
@@ -223,20 +261,17 @@ class GameScene: SKScene {
             obj["Saved"] = count-countDead;
             obj["TotalScore"] = score;
             obj.saveInBackground();
+            self.audioPlayer.stop();
+            print("music is off")
+            self.soundControl.text = "-Sound Off-"
+            let transitionTimer =  NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "NavTransition", userInfo: nil, repeats: false);
         }
         self.makeNewObject();
     }
     
-    /// starts action to animate object - frame animation
-    //**New**
-//    func addAnimationToObj(node: SKSpriteNode){
-//        node.runAction(SKAction.repeatActionForever(
-//            SKAction.animateWithTextures(self.animationFrames,
-//                timePerFrame: 0.2,
-//                resize: false,
-//                restore: true)),
-//            withKey:"animationMain");
-//    }
+    func NavTransition(){
+        self.navigator.popViewControllerAnimated(true)
+    }
     
     func addAnimationToObj(node: SKSpriteNode){
         node.runAction(SKAction.animateWithTextures(
@@ -249,12 +284,17 @@ class GameScene: SKScene {
             node.texture = self.animationFrames[self.animationFrames.count-1];
             node.removeFromParent();
             self.countDead++;
+            self.deathNotification.text = "Killed!"
         })
     }
     
     /// Move animation
     func startMoving(node: SKSpriteNode){
-        node.runAction(SKAction.moveToX((self.frame.size.width)*(0.75), duration: 5));
+        node.runAction(SKAction.moveToX((self.frame.size.width)*(0.75), duration: 5),
+            completion:{
+                print("saved")
+                node.removeFromParent()
+        });
     }
     
     /// makes object with animation

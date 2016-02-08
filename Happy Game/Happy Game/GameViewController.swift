@@ -17,23 +17,22 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.hidesBackButton = true
         print(String(self.levelManager.level));
         
         scene = GameScene(size: view.bounds.size)
         scene.backgroundImageName = levelManager.backGroundname;
+        scene.navigator = self.navigationController;
         
-        var name = Int(arc4random_uniform(1)+1);
-        switch(name){
-        case 1:
+        let name = Int(arc4random_uniform(10));
+        print(name)
+        if (name>5){
             scene.atlasName = "cuddles";
-            break;
-        case 2:
-            scene.atlasName = "petunia";
-            break;
-        default:
-            break;
         }
+        else{
+            scene.atlasName = "petunia";
+        }
+
         let skView = view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
