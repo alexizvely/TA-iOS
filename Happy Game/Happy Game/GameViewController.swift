@@ -22,7 +22,22 @@ class GameViewController: UIViewController {
         
         scene = GameScene(size: view.bounds.size)
         scene.backgroundImageName = levelManager.backGroundname;
-        scene.atlasName = "cuddles";
+        
+        var name = Int(arc4random_uniform(2)+1);
+        name=2;
+        switch(name){
+        case 1:
+            scene.atlasName = "cuddles";
+            break;
+        case 2:
+            scene.atlasName = "giggles";
+            break;
+        case 3:
+            scene.atlasName = "petunia";
+            break;
+        default:
+            break;
+        }
         let skView = view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true

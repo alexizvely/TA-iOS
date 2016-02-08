@@ -10,7 +10,6 @@
 		BD12B2AE1C641DA0002CBAE9 /* LevelSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12B2AD1C641DA0002CBAE9 /* LevelSelectionViewController.swift */; };
 		BD12B2B11C642A99002CBAE9 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12B2B01C642A99002CBAE9 /* LevelManager.swift */; };
 		BD12B2B61C64EC6C002CBAE9 /* cuddles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */; };
-		BD12B2B71C64EC6C002CBAE9 /* giggles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */; };
 		BD12B2B81C64EC6C002CBAE9 /* petunia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */; };
 		BD491AC71C6814760093E13F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD491AC61C6814760093E13F /* AudioToolbox.framework */; };
 		BD491AC91C6814820093E13F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD491AC81C6814820093E13F /* CFNetwork.framework */; };
@@ -34,6 +33,7 @@
 		BD65261E1C68373000B0B8B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD65261D1C68373000B0B8B3 /* Bolts.framework */; };
 		BD6526201C68373B00B0B8B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD65261F1C68373B00B0B8B3 /* Parse.framework */; };
 		BD6526241C683F1B00B0B8B3 /* tmp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD6526231C683F1B00B0B8B3 /* tmp.atlas */; };
+		BD6526281C6847C200B0B8B3 /* giggles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD6526271C6847C200B0B8B3 /* giggles.atlas */; };
 		BD9342921C67BC1900FA3CA2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */; };
 		BD9342941C67DB1200FA3CA2 /* htf-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		BD12B2AD1C641DA0002CBAE9 /* LevelSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectionViewController.swift; sourceTree = "<group>"; };
 		BD12B2B01C642A99002CBAE9 /* LevelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cuddles.atlas; sourceTree = "<group>"; };
-		BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = giggles.atlas; sourceTree = "<group>"; };
 		BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = petunia.atlas; sourceTree = "<group>"; };
 		BD491AC61C6814760093E13F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BD491AC81C6814820093E13F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -70,6 +69,7 @@
 		BD65261D1C68373000B0B8B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BD65261F1C68373B00B0B8B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BD6526231C683F1B00B0B8B3 /* tmp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tmp.atlas; sourceTree = "<group>"; };
+		BD6526271C6847C200B0B8B3 /* giggles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = giggles.atlas; sourceTree = "<group>"; };
 		BD9342911C67BC1900FA3CA2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "htf-sound.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +151,7 @@
 				BD9342931C67DB1200FA3CA2 /* htf-sound.mp3 */,
 				BD6526231C683F1B00B0B8B3 /* tmp.atlas */,
 				BD12B2B31C64EC6C002CBAE9 /* cuddles.atlas */,
-				BD12B2B41C64EC6C002CBAE9 /* giggles.atlas */,
+				BD6526271C6847C200B0B8B3 /* giggles.atlas */,
 				BD12B2B51C64EC6C002CBAE9 /* petunia.atlas */,
 				BD12B2B21C64C1CD002CBAE9 /* GameScenes */,
 				BD12B2AF1C642A6A002CBAE9 /* GameManagers */,
@@ -239,11 +239,11 @@
 			files = (
 				BD12B2B81C64EC6C002CBAE9 /* petunia.atlas in Resources */,
 				BD12B2B61C64EC6C002CBAE9 /* cuddles.atlas in Resources */,
+				BD6526281C6847C200B0B8B3 /* giggles.atlas in Resources */,
 				BD54FCCF1C623223009F9122 /* LaunchScreen.storyboard in Resources */,
 				BD9342941C67DB1200FA3CA2 /* htf-sound.mp3 in Resources */,
 				BD54FCCC1C623223009F9122 /* Assets.xcassets in Resources */,
 				BD6526241C683F1B00B0B8B3 /* tmp.atlas in Resources */,
-				BD12B2B71C64EC6C002CBAE9 /* giggles.atlas in Resources */,
 				BD54FCCA1C623223009F9122 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
