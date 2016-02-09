@@ -13,21 +13,8 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var bgImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         bgImage.image = UIImage(named: "mainTree")
-//        self.view.insertSubview(backgroundImage, atIndex: 0)
-        // Do any additional setup after loading the view.
-        
-        let query = PFQuery(className: "Highscore");
-        do{
-            let result = try query.getFirstObject();
-            print(result);
-
-        }
-        catch _{
-            print("Err");
-        }
+    
     }
 
     override func didReceiveMemoryWarning() {

@@ -58,8 +58,8 @@ class GameScene: SKScene {
         
         gestureArea = SKSpriteNode(imageNamed: "save.png");
         gestureArea.position = CGPoint(x: (self.frame.size.width)*(0.38), y:CGRectGetMidY(self.frame));
-        gestureArea.xScale = 0.60;
-        gestureArea.yScale = 0.60;
+        gestureArea.xScale = 0.75;
+        gestureArea.yScale = 0.75;
         gestureArea.name = "command"
         self.addChild(gestureArea);
         gestureArea.zPosition = 300;
@@ -68,7 +68,7 @@ class GameScene: SKScene {
         let beltTexture = SKTexture(imageNamed: "tmp0");
 
         let beltNode = SKSpriteNode(texture: beltTexture);
-        beltNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: (CGRectGetMidY(self.frame)) - ((gestureArea.size.height)*0.85));
+        beltNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: (CGRectGetMidY(self.frame)) - ((gestureArea.size.height)*0.75));
         addChild(beltNode)
         beltNode.name="belt";
 
@@ -135,18 +135,21 @@ class GameScene: SKScene {
         var touchLocation = recognizer.locationInView(recognizer.view)
         touchLocation = self.convertPointFromView(touchLocation)
         let nodes = self.nodesAtPoint(touchLocation);
-        let nodeAtFront = nodes[0];
-        let targetNode = nodes[1];
-        
-        if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background" && targetNode.name != "belt"){
-                self.addAnimationToObj(nodes[1] as! SKSpriteNode);
-                score = score + 2;
-            }
-            else{
-                self.deathNotification.text = "Missed!"
+        if (nodes.count > 0){
+            let nodeAtFront = nodes[0];
+            let targetNode = nodes[1];
+            
+            if(nodeAtFront.name == "command"){
+                if(targetNode.name != "background" && targetNode.name != "belt"){
+                    self.addAnimationToObj(nodes[1] as! SKSpriteNode);
+                    score = score + 0.5;
+                }
+                else{
+                    self.deathNotification.text = "Missed!"
+                }
             }
         }
+
     }
     
     // **New**
@@ -159,18 +162,21 @@ class GameScene: SKScene {
         var touchLocation = recognizer.locationInView(recognizer.view)
         touchLocation = self.convertPointFromView(touchLocation)
         let nodes = self.nodesAtPoint(touchLocation);
-        let nodeAtFront = nodes[0];
-        let targetNode = nodes[1];
-        
-        if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background" && targetNode.name != "belt"){
-                self.addAnimationToObj(nodes[1] as! SKSpriteNode);
-                score = score + 0.5;
-            }
-            else{
-                self.deathNotification.text = "Missed!"
+        if (nodes.count > 0){
+            let nodeAtFront = nodes[0];
+            let targetNode = nodes[1];
+            
+            if(nodeAtFront.name == "command"){
+                if(targetNode.name != "background" && targetNode.name != "belt"){
+                    self.addAnimationToObj(nodes[1] as! SKSpriteNode);
+                    score = score + 0.5;
+                }
+                else{
+                    self.deathNotification.text = "Missed!"
+                }
             }
         }
+
     }
     
     // **New**
@@ -183,18 +189,21 @@ class GameScene: SKScene {
         var touchLocation = recognizer.locationInView(recognizer.view)
         touchLocation = self.convertPointFromView(touchLocation)
         let nodes = self.nodesAtPoint(touchLocation);
-        let nodeAtFront = nodes[0];
-        let targetNode = nodes[1];
-        
-        if(nodeAtFront.name == "command"){
-            if(targetNode.name != "background" && targetNode.name != "belt"){
-                self.addAnimationToObj(nodes[1] as! SKSpriteNode);
-                score = score + 1.5;
-            }
-            else{
-                self.deathNotification.text = "Missed!"
+        if (nodes.count > 0){
+            let nodeAtFront = nodes[0];
+            let targetNode = nodes[1];
+            
+            if(nodeAtFront.name == "command"){
+                if(targetNode.name != "background" && targetNode.name != "belt"){
+                    self.addAnimationToObj(nodes[1] as! SKSpriteNode);
+                    score = score + 0.5;
+                }
+                else{
+                    self.deathNotification.text = "Missed!"
+                }
             }
         }
+
     }
     
     // **New**
@@ -203,20 +212,21 @@ class GameScene: SKScene {
             return;
         }
        
-        
         var touchLocation = recognizer.locationInView(recognizer.view)
         touchLocation = self.convertPointFromView(touchLocation)
-        let node = self.nodeAtPoint(touchLocation);
         let nodes = self.nodesAtPoint(touchLocation);
-        let treeFrined = nodes[1].name;
-        
-        if(node.name == "command"){
-            if(treeFrined != "background" && treeFrined != "belt"){
-                self.addAnimationToObj(nodes[1] as! SKSpriteNode);
-                score = score + 0.5;
-            }
-            else{
-                self.deathNotification.text = "Missed!"
+        if (nodes.count > 0){
+            let nodeAtFront = nodes[0];
+            let targetNode = nodes[1];
+            
+            if(nodeAtFront.name == "command"){
+                if(targetNode.name != "background" && targetNode.name != "belt"){
+                    self.addAnimationToObj(nodes[1] as! SKSpriteNode);
+                    score = score + 0.5;
+                }
+                else{
+                    self.deathNotification.text = "Missed!"
+                }
             }
         }
     }
@@ -303,8 +313,8 @@ class GameScene: SKScene {
         let obj = SKSpriteNode(texture: startingImage); /// creates the node (from AppleDev: SKSpriteNode is a node that draws a textured image, a colored square, or a textured image blended with a color)
         
         obj.position = CGPoint(x: 20, y:CGRectGetMidY(self.frame)); /// sets position for our node
-        obj.xScale = 0.5;
-        obj.yScale = 0.5;
+        obj.xScale = 0.73;
+        obj.yScale = 0.73;
 
         addChild(obj); /// adds it to the scene
         obj.name = String(count);

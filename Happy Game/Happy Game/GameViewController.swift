@@ -61,10 +61,4 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
-//    override func didMoveToParentViewController(parent: UIViewController?) {
-//        if(parent != self.parentViewController){
-//        scene.audioPlayer.stop();
-//        }
-//    }
 }
